@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,51 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Custom Civic Signal colors
+				indigo: {
+					DEFAULT: '#2C365E',
+					50: '#E9EBEF',
+					100: '#D3D7DF',
+					200: '#A7AFBF',
+					300: '#7B87A0',
+					400: '#4F5F81',
+					500: '#2C365E',
+					600: '#242D4D',
+					700: '#1C233C',
+					800: '#14192B',
+					900: '#0C0E1A',
+				},
+				green: {
+					DEFAULT: '#2A6041',
+					50: '#E8F0EC',
+					100: '#D0E2D9',
+					200: '#A2C4B3',
+					300: '#74A78E',
+					400: '#468968',
+					500: '#2A6041',
+					600: '#225036',
+					700: '#1A402A',
+					800: '#13301F',
+					900: '#0B1A11',
+				},
+				bronze: {
+					DEFAULT: '#A67F5D',
+					50: '#F6F2EF',
+					100: '#EDE6DF',
+					200: '#DBCCBE',
+					300: '#C9B39E',
+					400: '#B7997E',
+					500: '#A67F5D',
+					600: '#89694D',
+					700: '#6C533C',
+					800: '#503D2C',
+					900: '#34281D',
+				},
+			},
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
+				serif: ['Merriweather', 'serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +129,31 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+				'pulse-light': {
+					'0%, 100%': {
+						opacity: '1'
+					},
+					'50%': {
+						opacity: '0.7'
+					}
+				},
+				'ripple': {
+					'0%': {
+						transform: 'scale(0.8)',
+						opacity: '1'
+					},
+					'100%': {
+						transform: 'scale(2)',
+						opacity: '0'
+					}
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-light': 'pulse-light 3s infinite',
+				'ripple': 'ripple 2s ease-out infinite',
 			}
 		}
 	},
